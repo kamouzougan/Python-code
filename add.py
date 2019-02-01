@@ -1,4 +1,4 @@
-#This program is to compute the addition of two number
+#This program is to compute the addition
 num1 = int(input("Please enter your first number:"))
 num2 = int(input("Please enter your second  number:"))
 sum = num1 + num2
