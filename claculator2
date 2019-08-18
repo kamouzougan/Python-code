@@ -1,0 +1,36 @@
+import random
+def addition(a,b) :
+    return a + b       
+def subtration(a,b) : 
+    total = a-b
+    return total 
+def division(a,b):
+    return(a/b)
+def Multiplication() : 
+    return (a * b)
+while(True) :
+   print("Welcome to my page") 
+   print("""++++++++++++++++++ 
+              1.Addition 
+              2.Subtration
+              3.Multiplication 
+              4.divition)
+           +++++++++++++++++""")
+   
+   choice = input(" please make your selection") 
+   a = int(input("please give me your first number"))
+   b =int( input("please give me your 2nd number"))
+   print("hello")
+     
+   if choice == '1':
+       print("hello")
+       print(a,"+",b,"=", addition(a,b))
+   elif choice == '2':
+       print(a,"-",b,"=", subtration(a,b))
+   elif choice == '3':
+       print(a,"*",b,"=", Multiplication(a,b))
+   elif choice == '4':
+       print(a,"/",b,"=", division(a,b))
+   else:
+     print("Invalid input") 
+     break
