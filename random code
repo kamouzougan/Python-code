@@ -1,0 +1,53 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Aug 27 19:22:49 2019
+
+@author: kamou
+"""
+'''
+sum = 0 
+scores=[98,94,93,95,84,79]
+for i in scores : 
+    sum = sum + i 
+print(sum)
+average = sum /len(scores)
+print(average)
+'''
+'''
+for element in range(10,0,-1) :
+   print(element)
+boolean = True 
+while boolean :
+    print("What is your name")
+    input()
+    name =input()
+    if 'kangni'in name :
+        print("hello" + name)
+    else:
+        print("You are not Kangni")
+'''
+'''
+even = []
+li = [1,2,3,4,5,6]
+for element in li :
+    if element % 2 == 0 : 
+        even.append(element)
+print(even)
+''' 
+'''   
+foods = {'a': 'apple', 'b': 'banana', 'c': 'cookie'}
+print(foods.keys())
+print(foods.values())
+'''
+place ={'il': 'chicago', 'ca': 'los angeles', 'co': 'boulder', 'oh': 'columbus', 'fl': 'tampa'}
+'''
+print(place.values())
+for key in place.values() :
+    if 'c' in key : 
+        print(key)
+'''       
+ages = {'julian': 20, 'bob': 23, 'zack': 3, 'anthony': 95, 'daniel': 41} 
+for k,v in ages.items():
+   #print(k,v)
+   result=sorted(ages.items(), key=lambda x: x[1])    
+print(result)
