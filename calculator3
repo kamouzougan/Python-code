@@ -1,0 +1,40 @@
+def add(num1,num2) :  
+    return num1 + num2 
+def subtraction(num1,num2): 
+    return num1 - num2 
+    
+    print(total)
+def division(num1,num2): 
+    try : 
+        return num1/num2 
+    except ZeroDivisionError:
+        return None
+def  multiplication(num1,num2):
+    return num1* num2 
+  
+while (True):
+   print("Welcome to my calculator")
+   print(''' 
+           1.Addition 
+           2.Subtraction
+           3.Multiplication
+           4.Division 
+''' )
+   choice = input()
+   num1 = int(input("plese"))
+   num2 = int(input('please'))
+   if choice == '1':
+      
+      total =add(num1,num2) 
+      print(total)
+   if choice == '2' : 
+      total = subtraction(num1,num2)
+      print(total)
+    
+   if choice == '3' : 
+      total = multiplication(num1,num2)
+      print(total)
+   if choice == '4' :
+       total = division(num1,num2)
+       print(total)
+  
