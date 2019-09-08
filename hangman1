@@ -1,0 +1,110 @@
+import random 
+'''
+ #Add another variable for input called 'attendance'. Ask the user if their attendance is always good. The answer should be yes, - add this to the mix of statements to produce the final answer
+     #Ask for the user to also enter their current ID number. The ID must start with the digits "07"(using the @ as an example, create an if statment to check for this too")
+print("Answer the question to see if you are eligible to join the course:")
+hw=input("Do you do your hw?:")
+effort=input("Do you always put in a 100% effort?:")
+if hw=="yes" and effort=="yes":
+    print("We'd love to have you on the course")
+else:
+    print("Not sure about you on this course. Sorry!")
+email=input("We would like your email address for our records, Please enter it:")
+if "@" in email:
+    print("That is a valid email, Thank you")
+else:
+     print("That doesn't appear to be a valid e-mail.")
+     '''
+     #importing the time module
+import time
+
+#welcoming the user
+name = input("What is your name? ")
+
+print ("Hello, " + name, "Time to play hangman!")
+
+print ("")
+
+#wait for 1 second
+time.sleep(1)
+
+print ("Start guessing...")
+time.sleep(0.5)
+
+#here we set the secret
+word='''ant baboon badger bat bear beaver camel cat clam cobra cougar
+coyote crow deer dog donkey duck eagle ferret fox frog goat goose hawk lion 
+lizard llama mole monkey moose mouse mule newt otter owl panda parrot 
+pigeon python rabbit ram rat raven rhino salmon seal shark sheep skunk sloth snake 
+spider stork swan tiger toad trout turkey turtle weasel whale wolf wombat zebra'''.split()
+
+index = random.randint(0,len(word))
+print(word[index])
+
+#creates an variable with an empty value
+guesses = ''
+
+#determine the number of turns
+turns = 10
+
+# Create a while loop
+
+#check if the turns are more than zero
+while turns > 0:         
+
+    # make a counter that starts with zero
+    failed = 0             
+
+    # for every character in secret_word    
+    for char in word[index]:      
+
+    # see if the character is in the players guess
+        if char in guesses:    
+    
+        # print then out the character
+            print (char)    
+
+        else:
+    
+        # if not found, print a dash
+            print ("_" , end =' '),     
+       
+        # and increase the failed counter with one
+            failed += 1    
+
+    # if failed is equal to zero
+
+    # print You Won
+    if failed == 0:        
+        print ("You won")  
+
+    # exit the script
+        break              
+
+    print
+
+    # ask the user go guess a character
+    guess = input("guess a character:") 
+
+    # set the players guess to guesses
+    guesses += guess                    
+
+    # if the guess is not found in the secret word
+    if guess not in word[index]:  
+ 
+     # turns counter decreases with 1 (now 9)
+        turns -= 1        
+ 
+    # print wrong
+        print ('Wrong the word i was thinking of was ',word[index])
+   
+ 
+    # how many turns are left
+        print ("You have", + turns, 'more guesses' )
+ 
+    # if the turns are equal to zero
+        if turns == 0:           
+    
+        # print "You Loose"
+            print ("You Loose")
+  
