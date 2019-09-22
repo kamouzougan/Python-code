@@ -2,7 +2,8 @@ import time
 import sys 
 import os 
 from getpass import getpass
-
+from termcolor import colored, cprint 
+from colorama import Fore, Back, Style 
 balance = 0 
 pin_list = []
 def deposit(num): 
@@ -26,24 +27,26 @@ def createpin():
   else : 
     print('access denied')
     print('You are not authorized to access an account ')
+    sys.exit()
 createpin()
 while (True):
  
-    
-  print(''' ########################################################''')
+  print(colored('Hello, World!', 'green')) 
+  print(colored(''' ########################################################''','green'))
   print('                  Welcome to my bank                         ')
-  print  ('''  
+  print  (colored('''  
                        1.deposit
                        2.withdraw 
                        3.check balance) 
-                ''')
+                ''','red'))
               
   menu = input('please make your selection')
   if menu == '1': 
    amount = int(input('Please enter your amount') )
    print('deposit')
    balance = deposit(amount)
-   print('your total deposit is :',balance)
+   print(colored('your total deposit is :\n','green' ))
+   print(balance)
   
               
   elif menu == '2':
@@ -54,3 +57,5 @@ while (True):
    print()
   elif menu =='3':
        print('Your total balance is : ' , balance)
+                
+        
